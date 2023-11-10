@@ -3,3 +3,7 @@ LIBS = -lSDL2 -lSDL2main
 
 all:
 	g++ main.c -o chip8.exe ${CXXFLAGS} ${LIBS}
+
+debug:
+	g++ main.c -o chip8.exe ${CXXFLAGS} ${LIBS} -DDEBUG
+	./chip8.exe logo.ch8
